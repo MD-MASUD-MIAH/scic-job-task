@@ -1,4 +1,3 @@
-
 import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 
@@ -84,7 +83,7 @@ async function page({ params }) {
               </div>
               <div className="bg-pink-50 p-3 rounded-lg">
                 <p className="text-sm text-gray-500">Product ID</p>
-                <p className="font-medium">#{product.id}</p>
+                <p className="font-medium">#{product._id}</p>
               </div>
             </div>
 

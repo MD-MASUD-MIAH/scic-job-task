@@ -160,13 +160,12 @@ async function TopMedicine(props) {
   //   },
   // ];
 
-   const data = await dbConnect(collectionNameObj.medicinesCollection)
+  const data = await dbConnect(collectionNameObj.medicinesCollection)
     .find({})
     .toArray();
-  
 
   return (
-    <div className="py-10 w-11/12 mx-auto">
+    <div className=" w-11/12 mx-auto">
       <div className="py-10 flex  flex-col  items-center gap-4">
         <h1 className="text-center text-xl md:text-4xl font-bold">
           Most Popular Medicines
@@ -178,29 +177,34 @@ async function TopMedicine(props) {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {data.map((product) => (
+        {data?.slice(0, 8)?.map((product) => (
           <div
-            key={product.id}
+            key={product?._id}
             className="card w-80 bg-base-100 shadow-xl mx-auto my-8"
           >
             <figure className="px-6 pt-6">
               <img
-                src={product.image}
-                alt={product.name}
+                src={product?.image}
+                alt={product?.name}
                 className="rounded-xl h-48 object-contain"
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">{product.name}</h2>
+              <h2 className="card-title">{product?.name}</h2>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">{product.brand}</span>
-                <span className="badge badge-outline">{product.type}</span>
+                <span className="badge badge-outline">{product?.type}</span>
               </div>
               <div className="card-actions justify-between items-center mt-4">
                 <span className="text-2xl font-bold">
-                  ${product.price.toFixed(2)}
+                  ${product?.price?.toFixed(2)}
                 </span>
-                <Link href={`/medicine/${product._id}`} className="btn tom-btn">Details</Link>
+                <Link
+                  href={`/medicine/${product?._id}`}
+                  className="btn tom-btn"
+                >
+                  Details
+                </Link>
               </div>
             </div>
           </div>

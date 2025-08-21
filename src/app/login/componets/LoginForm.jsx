@@ -24,7 +24,7 @@ function LoginForm(props) {
       });
 
       if (response.ok) {
-        router.push("/");
+        router.push("/medicines");
         e.target.reset();
        Swal.fire({
   title: "Logged In Successfully!",

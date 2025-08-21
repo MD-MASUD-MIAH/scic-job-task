@@ -15,7 +15,7 @@ function SocialLogin(props) {
 
   useEffect(() => {
     if (session?.status == "authenticated") {
-      router.push("/");
+      router.push("/medicines");
       Swal.fire({
         title: "Logged In Successfully!",
         icon: "success",

@@ -35,15 +35,15 @@ function Navbar(props) {
         <Link href={"/"}>Home</Link>
       </li>
       <li>
-        <Link href={"/"}>Medicines</Link>
+        <Link href={"/medicines"}>Medicines</Link>
       </li>
       <li>
-        <Link href={"/"}>Add Medicine</Link>
+        <Link href={"/dashboard/add-medicine"}>Add Medicine</Link>
       </li>
     </>
   );
   return (
-    <div className="bg-[#ff99c8] sticky top-0 z-20 ">
+    <div className="bg-[#ff99c8] sticky top-0 z-20 text-white ">
       <div className="navbar  w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -96,7 +96,10 @@ function Navbar(props) {
                 alt="
                 user photo"
                 className="rounded-full border border-white"
-                src={session?.user?.image || 'https://i.ibb.co.com/9J4wLk7/pngtree-casual-man-flat-design-avatar-profile-picture-vector-png-image-15526568.png'}
+                src={
+                  session?.user?.image ||
+                  "https://i.ibb.co.com/9J4wLk7/pngtree-casual-man-flat-design-avatar-profile-picture-vector-png-image-15526568.png"
+                }
               ></Image>
 
               <button onClick={handleLogout} className="btn nav-btn">

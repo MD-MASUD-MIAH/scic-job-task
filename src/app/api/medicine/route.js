@@ -1,6 +1,15 @@
 import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
 import { NextResponse } from "next/server";
 
+
+export async function GET() { 
+
+  const data = await dbConnect(collectionNameObj.medicinesCollection).find({}).sort({_id:-1}).toArray() 
+  return Response.json({data})
+  
+}
+
+
 export const POST = async (req) => {
   try {
     const body = await req.json(); 
@@ -23,20 +32,3 @@ export const POST = async (req) => {
 };
 
 
-export const GET = async () => {
-  try {
-    const medicineCollection =  dbConnect(collectionNameObj.medicinesCollection)
-
-    const medicines = await medicineCollection.find({}).toArray();
-
-    return NextResponse.json(
-      { message: "Medicines fetched successfully", data: medicines },
-      { status: 200 }
-    );
-  } catch (error) {
-    return NextResponse.json(
-      { message: "Error fetching medicines", error: error.message },
-      { status: 500 }
-    );
-  }
-};

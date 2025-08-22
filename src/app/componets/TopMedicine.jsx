@@ -161,10 +161,13 @@ async function TopMedicine(props) {
   //   },
   // ];
 
-  const data = await dbConnect(collectionNameObj.medicinesCollection)
-    .find({})
-    .toArray();
+  const res = await fetch(`http://localhost:3000/api/medicine`,{
+  cache:'no-store'
+})
 
+const json = await res.json() 
+
+const data = json.data
   return (
     <div className=" w-11/12 mx-auto">
       <div className="py-10 flex  flex-col  items-center gap-4">

@@ -7,10 +7,13 @@ Image
 async function Medicines() {
 
    
-const data = await dbConnect(collectionNameObj.medicinesCollection)
-    .find({})
-    .toArray();
+const res = await fetch(`http://localhost:3000/api/medicine`,{
+  cache:'no-store'
+})
 
+const json = await res.json() 
+
+const data = json.data
 
    
   

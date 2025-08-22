@@ -4,6 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import Swal from "sweetalert2";
+import ThemeToggle from "./ThemeToggle";
 function Navbar(props) {
   const { data: session, status } = useSession();
   console.log(session);
@@ -39,7 +40,8 @@ function Navbar(props) {
       </li>
       <li>
         <Link href={"/dashboard/add-medicine"}>Add Medicine</Link>
-      </li>
+      </li> 
+      <li><ThemeToggle></ThemeToggle></li>
     </>
   );
   return (
@@ -66,7 +68,7 @@ function Navbar(props) {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-black"
             >
               {links}
             </ul>

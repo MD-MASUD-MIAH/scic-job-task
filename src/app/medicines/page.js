@@ -2,7 +2,9 @@ import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
 import Image from "next/image";
 import Link from "next/link";
 async function Medicines(props) {
-  const data = await dbConnect(collectionNameObj.medicinesCollection).find({}).toArray();
+  const data = await dbConnect(collectionNameObj.medicinesCollection)
+    .find({})
+    .toArray();
 
   return (
     <div className="py-10 w-11/12 mx-auto overflow-hidden">
@@ -11,7 +13,9 @@ async function Medicines(props) {
           Complete Medicine List
         </h1>
         <p className="text-center w-10/12 md:max-w-2xl ">
-         Browse our complete medicine list featuring trusted brands, detailed information, and affordable prices to support your health and wellness needs.
+          Browse our complete medicine list featuring trusted brands, detailed
+          information, and affordable prices to support your health and wellness
+          needs.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -38,7 +42,7 @@ async function Medicines(props) {
               </h2>
               <p className="text-sm text-gray-600">{product?.brand}</p>
               <div className="mt-4 flex justify-between items-center">
-                <span className="text-2xl font-bold ">
+                <span className="text-2xl text-black font-bold ">
                   ${product?.price?.toFixed(2)}
                 </span>
                 <Link

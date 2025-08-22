@@ -51,26 +51,26 @@ function Hero(props) {
         >
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
             Empower Your{" "}
-            <span className="text-blue-600">Health Journey</span>
+            <span className="text-[#ff99c8]">Health Journey</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-10">
             Discover expert insights, trusted advice, and the latest in medical research to stay informed and healthy.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/blog">
+            <Link href={"/medicines"}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all duration-300"
+                className="px-8 py-3 bg-[#ff99c8] hover:bg-[#ff99c8] text-white font-semibold rounded-lg shadow-md transition-all duration-300"
               >
                 Read Articles
               </motion.button>
             </Link>
-            <Link href="/resources">
+            <Link href={"/medicines"}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-transparent hover:bg-blue-50 text-blue-600 font-semibold rounded-lg border border-blue-600 shadow-md transition-all duration-300"
+                className="px-8 py-3 bg-transparent hover:bg-blue-50 text-#ff99c8 font-semibold rounded-lg border border-[#ff99c8] shadow-md transition-all duration-300"
               >
                 Explore Resources
               </motion.button>
@@ -86,19 +86,19 @@ function Hero(props) {
           >
             <div className="flex items-center gap-3 text-gray-700">
               <div className="p-3 bg-blue-100 rounded-full">
-                <FiBook className="text-blue-600 text-xl" />
+                <FiBook className="text-[#ff99c8] text-xl" />
               </div>
               <span className="font-medium">Expert Articles</span>
             </div>
             <div className="flex items-center gap-3 text-gray-700">
               <div className="p-3 bg-blue-100 rounded-full">
-                <FiHeart className="text-blue-600 text-xl" />
+                <FiHeart className="text-[#ff99c8] text-xl" />
               </div>
               <span className="font-medium">Health Tips</span>
             </div>
             <div className="flex items-center gap-3 text-gray-700">
               <div className="p-3 bg-blue-100 rounded-full">
-                <FiUsers className="text-blue-600 text-xl" />
+                <FiUsers className="text-[#ff99c8] text-xl" />
               </div>
               <span className="font-medium">Community Insights</span>
             </div>
@@ -115,7 +115,7 @@ function Hero(props) {
     className="absolute bottom-6 left-1/2 -translate-x-1/2"
   >
     <svg
-      className="w-6 h-6 text-blue-600 animate-bounce"
+      className="w-6 h-6 text-[#ff99c8] animate-bounce"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

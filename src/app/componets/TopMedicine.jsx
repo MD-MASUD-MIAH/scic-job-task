@@ -1,4 +1,5 @@
 import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
+import Image from "next/image";
 import Link from "next/link";
 async function TopMedicine(props) {
   // const data = [
@@ -180,16 +181,18 @@ async function TopMedicine(props) {
         {data?.slice(0, 8)?.map((product) => (
           <div
             key={product?._id}
-            className="card w-80 bg-base-100 shadow-xl mx-auto my-8"
+            className="card w-80 bg-base-100 shadow-xl mx-auto my-8 border border-[#ff99c8]"
           >
-            <figure className="px-6 pt-6">
-              <img
+            <figure className="px-6 pt-6  ">
+              <Image
+                height={200}
+                width={300}
                 src={product?.image}
                 alt={product?.name}
-                className="rounded-xl h-48 object-contain"
+                className="rounded-xl  h-48 object-contain "
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body ">
               <h2 className="card-title">{product?.name}</h2>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">{product.brand}</span>

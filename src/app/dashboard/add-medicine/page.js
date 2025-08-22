@@ -1,11 +1,13 @@
 "use client";
 
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
 function AddMedicine(props) {
   const [loading, setLoading] = useState(false);
   const { data: session } = useSession();
+  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -48,6 +50,7 @@ function AddMedicine(props) {
       });
       setLoading(false);
       form.reset();
+      router.push("/medicines");
     } else {
       Swal.error({
         title: "something! wrong",
@@ -59,7 +62,7 @@ function AddMedicine(props) {
   };
   return (
     <div className="py-10">
-      <div className="w-11/12 md:max-w-7xl mx-auto  bg-white shadow-2xl rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl">
+      <div className="w-11/12 md:max-w-7xl mx-auto  border  border-[#ff99c8] shadow-2xl rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-extrabold text-[#f472b6] tracking-tight">
             Add New Medicine
@@ -73,7 +76,7 @@ function AddMedicine(props) {
           {/* Medicine Name */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Medicine Name
               </span>
             </label>
@@ -89,7 +92,7 @@ function AddMedicine(props) {
           {/* Brand */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Brand
               </span>
             </label>
@@ -104,7 +107,7 @@ function AddMedicine(props) {
           {/* Type Dropdown */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold">
                 Type
               </span>
             </label>
@@ -122,7 +125,7 @@ function AddMedicine(props) {
           {/* Price */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Price
               </span>
             </label>
@@ -139,7 +142,7 @@ function AddMedicine(props) {
           {/* Stock Quantity */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Stock Quantity
               </span>
             </label>
@@ -154,7 +157,7 @@ function AddMedicine(props) {
           {/* Image URL */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Image URL
               </span>
             </label>
@@ -169,7 +172,7 @@ function AddMedicine(props) {
           {/* Expiry Date */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Expiry Date
               </span>
             </label>
@@ -182,7 +185,7 @@ function AddMedicine(props) {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Manufacture Date
               </span>
             </label>
@@ -195,7 +198,7 @@ function AddMedicine(props) {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Author Name
               </span>
             </label>
@@ -209,7 +212,7 @@ function AddMedicine(props) {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold ">
                 Author Email
               </span>
             </label>
@@ -224,7 +227,7 @@ function AddMedicine(props) {
           {/* Description (spans both columns) */}
           <div className="form-control lg:col-span-2">
             <label className="label">
-              <span className="label-text font-semibold text-gray-700">
+              <span className="label-text font-semibold">
                 Description
               </span>
             </label>

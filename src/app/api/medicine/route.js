@@ -21,3 +21,22 @@ export const POST = async (req) => {
     );
   }
 };
+
+
+export const GET = async () => {
+  try {
+    const medicineCollection =  dbConnect(collectionNameObj.medicinesCollection)
+
+    const medicines = await medicineCollection.find({}).toArray();
+
+    return NextResponse.json(
+      { message: "Medicines fetched successfully", data: medicines },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Error fetching medicines", error: error.message },
+      { status: 500 }
+    );
+  }
+};

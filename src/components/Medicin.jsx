@@ -1,18 +1,8 @@
-
-
-import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
+"use client"
 import Image from "next/image";
-import Link from "next/link"; 
-Image
-async function Medicines() {
-
-   
-const data = await dbConnect(collectionNameObj.medicinesCollection)
-    .find({})
-    .toArray();
-
-
-   
+import Link from "next/link";
+ 
+ function Medicin({data}) {
   
   return (
     <div className="py-10 w-11/12 mx-auto overflow-hidden">
@@ -68,4 +58,4 @@ const data = await dbConnect(collectionNameObj.medicinesCollection)
   );
 }
 
-export default Medicines;
+export default Medicin;

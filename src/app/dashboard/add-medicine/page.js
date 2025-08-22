@@ -76,9 +76,7 @@ function AddMedicine(props) {
           {/* Medicine Name */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Medicine Name
-              </span>
+              <span className="label-text font-semibold ">Medicine Name</span>
             </label>
             <input
               type="text"
@@ -92,9 +90,7 @@ function AddMedicine(props) {
           {/* Brand */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Brand
-              </span>
+              <span className="label-text font-semibold ">Brand</span>
             </label>
             <input
               type="text"
@@ -107,9 +103,7 @@ function AddMedicine(props) {
           {/* Type Dropdown */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">
-                Type
-              </span>
+              <span className="label-text font-semibold">Type</span>
             </label>
             <select
               name="type"
@@ -125,9 +119,7 @@ function AddMedicine(props) {
           {/* Price */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Price
-              </span>
+              <span className="label-text font-semibold ">Price</span>
             </label>
             <input
               type="number"
@@ -142,9 +134,7 @@ function AddMedicine(props) {
           {/* Stock Quantity */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Stock Quantity
-              </span>
+              <span className="label-text font-semibold ">Stock Quantity</span>
             </label>
             <input
               type="number"
@@ -157,9 +147,7 @@ function AddMedicine(props) {
           {/* Image URL */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Image URL
-              </span>
+              <span className="label-text font-semibold ">Image URL</span>
             </label>
             <input
               type="url"
@@ -172,9 +160,7 @@ function AddMedicine(props) {
           {/* Expiry Date */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Expiry Date
-              </span>
+              <span className="label-text font-semibold ">Expiry Date</span>
             </label>
             <input
               type="date"
@@ -198,9 +184,7 @@ function AddMedicine(props) {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Author Name
-              </span>
+              <span className="label-text font-semibold ">Author Name</span>
             </label>
             <input
               type="text"
@@ -212,9 +196,7 @@ function AddMedicine(props) {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold ">
-                Author Email
-              </span>
+              <span className="label-text font-semibold ">Author Email</span>
             </label>
             <input
               type="text"
@@ -227,9 +209,7 @@ function AddMedicine(props) {
           {/* Description (spans both columns) */}
           <div className="form-control lg:col-span-2">
             <label className="label">
-              <span className="label-text font-semibold">
-                Description
-              </span>
+              <span className="label-text font-semibold">Description</span>
             </label>
             <textarea
               name="description"

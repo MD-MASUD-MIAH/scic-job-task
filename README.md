@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Product Management App
 
-## Getting Started
+A simple Next.js 15 application demonstrating public and protected pages with basic authentication using NextAuth.js. Users can browse products, view details, and add new products after logging in.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [https://next-job-task.vercel.app](https://next-job-task.vercel.app) with your browser to see the result.
+### Public Pages
+- **Landing Page (`/`)**
+  - Includes Navbar, Hero, Product Highlights, and Footer
+  - Navigation to Login and Products
+  - No authentication required
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Product List (`/products`)**
+  - Fetches and displays a list of products from a mock backend
+  - Each product shows name, description, price, and a "Details" button
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Product Details (`/products/[id]`)**
+  - Shows full details of a single product
+  - Publicly accessible
 
-## Learn More
+### Authentication
+- **Login Page (`/login`)**
+  - Social login (Google) or credential login using NextAuth.js
+  - Redirects to `/products` after successful login
 
-To learn more about Next.js, take a look at the following resources:
+### Protected Pages
+- **Add Product (`/dashboard/add-product`)**
+  - Accessible only to authenticated users
+  - Form to add a new product
+  - Stores product data in backend
+  - Redirects unauthenticated users to login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Optional Enhancements
+- Loading spinner on form submissions
+- Toast notifications on successful product addition
+- Theme toggle (light/dark mode)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Technologies Used
+- [Next.js 15](https://nextjs.org/) (App Router)
+- [NextAuth.js](https://next-auth.js.org/) for authentication
+- Route Handlers (/api) for backend operations
+- Tailwind CSS for styling (optional)
+- Optional: React Toastify for notifications
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+

@@ -30,7 +30,7 @@ function AddMedicine(props) {
 
     setLoading(true);
 
-    const res = await fetch("http://localhost:3000/api/medicine", {
+    const res = await fetch("https://next-job-task.vercel.app/api/medicine", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

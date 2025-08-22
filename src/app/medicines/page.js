@@ -1,22 +1,15 @@
-
-
-import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
 import Image from "next/image";
-import Link from "next/link"; 
-Image
+import Link from "next/link";
+Image;
 async function Medicines() {
+  const res = await fetch(`https://next-job-task.vercel.app/api/medicine`, {
+    cache: "no-store",
+  });
 
-   
-const res = await fetch(`http://localhost:3000/api/medicine`,{
-  cache:'no-store'
-})
+  const json = await res.json();
 
-const json = await res.json() 
+  const data = json.data;
 
-const data = json.data
-
-   
-  
   return (
     <div className="py-10 w-11/12 mx-auto overflow-hidden">
       <div className="py-10 flex  flex-col  items-center gap-4">
